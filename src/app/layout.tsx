@@ -1,4 +1,8 @@
+"use client"
 import { Inter } from 'next/font/google'
+import GlobalStyle from '../globalStyles'
+import { theme } from "../theme.ts"
+import { ThemeProvider } from 'styled-components'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,7 +18,10 @@ type IRootLayout = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <body className={inter.className}>{children}</body>
+      </ThemeProvider>
     </html>
   )
 }
