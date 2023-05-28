@@ -2,7 +2,9 @@
 import { Inter } from 'next/font/google'
 import GlobalStyle from '../globalStyles'
 import { theme } from "../theme.ts"
-import { ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
+
+import { Sidebar } from "../Components/Sidebar"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,12 +17,24 @@ type IRootLayout = {
   children: React.ReactNode
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const SMainContainer = styled.body`
+  padding: 12px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+`
+
+export default function RootLayout({ children }: IRootLayout) {
   return (
     <html lang="en">
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <body className={inter.className}>{children}</body>
+        <SMainContainer className={inter.className}>
+          <Sidebar />
+          <div className="page">
+            {children}
+          </div>
+        </SMainContainer>
       </ThemeProvider>
     </html>
   )

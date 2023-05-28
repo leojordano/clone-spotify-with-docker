@@ -11,6 +11,11 @@ const GlobalStyle = createGlobalStyle`
         margin: 0px;
         outline: 0px;
         box-sizing: border-box;
+        color: ${props => props.theme.colors.white};
+    }
+
+    div {
+        max-height: calc(100vh - 24px);
     }
 `;
 
