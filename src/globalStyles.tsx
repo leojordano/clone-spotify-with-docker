@@ -3,7 +3,8 @@ import { createGlobalStyle } from "styled-components"
 const GlobalStyle = createGlobalStyle`
     html, body {
         height: 100%;
-        background-color: ${props => props.theme.background};
+        background-color: ${({theme}) => theme.background};
+        position: relative;
     }
 
     * {
@@ -16,6 +17,10 @@ const GlobalStyle = createGlobalStyle`
 
     div {
         max-height: calc(100vh - 24px);
+    }
+
+    .page {
+        width: 100%;
     }
 `;
 

@@ -4,6 +4,7 @@ import GlobalStyle from '../globalStyles'
 import { theme } from "../theme.ts"
 import styled, { ThemeProvider } from 'styled-components'
 
+import { Header } from '../Components/Header'
 import { Sidebar } from "../Components/Sidebar"
 
 const inter = Inter({ subsets: ['latin'] })
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: IRootLayout) {
         <SMainContainer className={inter.className}>
           <Sidebar />
           <div className="page">
+            <Header />
             {children}
           </div>
         </SMainContainer>
