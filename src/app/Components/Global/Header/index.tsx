@@ -2,9 +2,10 @@ import React from "react"
 import { MdArrowBackIosNew, MdArrowForwardIos, MdPeopleAlt } from "react-icons/md"
 import { FaUser } from 'react-icons/fa'
 
-import { Flex } from '../../@styles/SFlex'
-import { SHeader } from './styles.tsx'
-import { Icon } from "@/src/@styles/SIcon"
+import { Flex } from '../../../../@styles/SFlex'
+import { Icon } from "../../../../@styles/SIcon"
+
+import { SHeader } from './styles'
 
 export const Header = () => {
     return (

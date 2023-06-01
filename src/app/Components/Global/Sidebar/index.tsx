@@ -1,9 +1,9 @@
 import React from "react"
 import { HiHome, HiOutlineSearch, HiViewList } from "react-icons/hi"
 
-import { Icon } from '../../@styles/SIcon.tsx'
-import { SContainer, SGroupContainer, SImage } from "./styles.tsx"
-import { theme } from "@/src/theme.ts"
+import { Icon } from "../../../../@styles"
+
+import { SContainer, SGroupContainer, SImage } from "./styles"
 
 export const Sidebar = () => {
     return (
