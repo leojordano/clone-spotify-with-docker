@@ -1,3 +1,4 @@
 export { LastedAction } from "./LastedActions"
+export { Playlist } from './Playlists'
 
-export { SContainer, SLastedActionsContainer } from "./Styles"
+export * from "./Styles"

@@ -9,7 +9,7 @@ const SContainer = styled.div`
 
 const SGroupContainer = styled.div`
     border-radius: ${props => props.theme.radius};
-    background-color: ${props => props.theme.colors.lightGray};
+    background-color: ${props => props.theme.colors.lightBlack};
     display: flex;
     flex-direction: column;
     justify-content: start;

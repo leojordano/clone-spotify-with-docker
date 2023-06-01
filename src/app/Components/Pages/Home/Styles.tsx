@@ -12,11 +12,21 @@ const SLastedActionsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  margin-top: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 30px 0px;
 `
+
+const SPlaylistsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin: 30px 0px;
+` 
 
 export {
     SContainer,
-    SLastedActionsContainer
+    SLastedActionsContainer,
+    SPlaylistsContainer
 }
