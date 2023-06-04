@@ -2,9 +2,9 @@
 
 import { Inter } from 'next/font/google'
 import GlobalStyle from '../globalStyles'
-import { theme } from "../theme.ts"
-import styled, { ThemeProvider } from 'styled-components'
+import styled from 'styled-components'
 
+import { AppProviders } from "./Components/Global/AppProviders"
 import { Sidebar, Header } from './Components/Global'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -23,7 +23,7 @@ const SMainContainer = styled.body`
 export default function RootLayout({ children }: IRootLayout) {
   return (
     <html lang="en">
-      <ThemeProvider theme={theme}>
+      <AppProviders>
         <GlobalStyle />
         <SMainContainer className={inter.className}>
           <Sidebar />
@@ -32,7 +32,7 @@ export default function RootLayout({ children }: IRootLayout) {
             {children}
           </div>
         </SMainContainer>
-      </ThemeProvider>
+      </AppProviders>
     </html>
   )
 }

@@ -14,7 +14,7 @@ export const SHeader = styled.header`
         justify-content: center;
         align-items: center;
         padding: 8px;
-        background-color: ${({ theme }) => theme.colors.lightGray}80;
+        background-color: ${({ theme }) => theme.lightGray}80;
         border-radius: 100%;
     }
 `

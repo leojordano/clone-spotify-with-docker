@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0px;
         outline: 0px;
         box-sizing: border-box;
-        color: ${props => props.theme.colors.white};
+        color: ${props => props.theme.white};
     }
 
     div {
