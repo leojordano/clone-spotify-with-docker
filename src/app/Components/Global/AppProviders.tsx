@@ -4,7 +4,7 @@ import { useState, Suspense } from 'react'
 import type { AppProps } from 'next/app';
 
 import { ErrorBoundary } from "react-error-boundary";
-import { Hydrate, QueryClientProvider, QueryClient } from 'react-query'
+import { QueryClientProvider, QueryClient } from 'react-query'
 import { useServerInsertedHTML } from 'next/navigation';
 import { theme } from "../../../theme"
 import { ThemeProvider, ServerStyleSheet, StyleSheetManager } from 'styled-components'

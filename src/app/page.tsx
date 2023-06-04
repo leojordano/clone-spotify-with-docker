@@ -29,7 +29,7 @@ export default function Home() {
         <Page.LastedAction Image="http://placekitten.com/80/80" Name="Teste" />
       </Page.SLastedActionsContainer>
 
-      <Flex justifyContent='space-between' alignItems='center'>
+      <Flex justify='space-between' align='center'>
         <h1>Made For Jordanoo</h1>
         <span>Show All</span>
       </Flex>
