@@ -27,6 +27,7 @@ export const Flex = (props: IFlex) => {
         gap, 
         ...rest 
     } = props
+    
     return (
         <SFlex 
             direction={direction}

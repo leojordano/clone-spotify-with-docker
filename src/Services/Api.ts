@@ -15,7 +15,7 @@ export class CatApi {
                 status: result.status
             };
         } catch(e) {
-            console.log(e)
+            console.error(e)
         }
     }
 

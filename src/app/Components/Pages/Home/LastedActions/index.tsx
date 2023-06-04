@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import { FaPlay } from 'react-icons/fa'
+import { Skeleton } from "../../../Global";
 
 interface ILastedAction {
     Image: string
     Name: string
+    isLoading: boolean
 }
 
 const SLastedAction = styled.div`
+    height: 80px;
     border-radius: 8px;
     background-color: ${({theme})=> theme.lightGray};
     display: flex;
@@ -43,9 +46,12 @@ const SLastedAction = styled.div`
     }
 `
 
-const LastedAction = ({Image, Name}: ILastedAction) => {
+const LastedAction = ({Image, Name, isLoading}: ILastedAction) => {
+    const ref = useRef<HTMLDivElement>(null)
+    
     return (
-        <SLastedAction>
+        <SLastedAction ref={ref}>
+            <Skeleton isShowing={isLoading} />
             <img src={Image} alt={Name} />
             <span>{Name}</span>
             <span className="play-icon"><FaPlay /></span>

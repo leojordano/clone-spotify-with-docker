@@ -7,26 +7,26 @@ import { CatApi } from "../Services/Api"
 import { Flex } from '../@styles'
 import * as Page from './Components/Pages/Home'
 
+const MAX_NUMBER_LASTEDACTIONS = 6;
+
 export default function Home() {
   const { data, isLoading, error } = useQuery({
     queryKey: [],
     queryFn: CatApi.GetCats 
   });
 
-  useEffect(() => {
-    console.log(data)
-  }, [])
+  console.log(data)
 
   return (
     <Page.SContainer>
       <h1>Boa noite</h1>
       <Page.SLastedActionsContainer>
-        <Page.LastedAction Image="http://placekitten.com/80/80" Name="Teste" />
-        <Page.LastedAction Image="http://placekitten.com/80/80" Name="Teste" />
-        <Page.LastedAction Image="http://placekitten.com/80/80" Name="Teste" />
-        <Page.LastedAction Image="http://placekitten.com/80/80" Name="Teste" />
-        <Page.LastedAction Image="http://placekitten.com/80/80" Name="Teste" />
-        <Page.LastedAction Image="http://placekitten.com/80/80" Name="Teste" />
+        <Page.LastedAction isLoading={isLoading} Image="http://placekitten.com/80/80" Name="Teste" />
+        <Page.LastedAction isLoading={isLoading} Image="http://placekitten.com/80/80" Name="Teste" />
+        <Page.LastedAction isLoading={isLoading} Image="http://placekitten.com/80/80" Name="Teste" />
+        <Page.LastedAction isLoading={isLoading} Image="http://placekitten.com/80/80" Name="Teste" />
+        <Page.LastedAction isLoading={isLoading} Image="http://placekitten.com/80/80" Name="Teste" />
+        <Page.LastedAction isLoading={isLoading} Image="http://placekitten.com/80/80" Name="Teste" />
       </Page.SLastedActionsContainer>
 
       <Flex justify='space-between' align='center'>
